@@ -1,0 +1,33 @@
+Source: libapache2-mod-fcgid
+Section: httpd
+Priority: optional
+Maintainer: Felix Geyer <fgeyer@debian.org>
+Build-Depends: debhelper (>= 9), apache2-dev (>= 2.4)
+Standards-Version: 3.9.4
+Homepage: http://httpd.apache.org/mod_fcgid/
+Vcs-Git: git://anonscm.debian.org/collab-maint/libapache2-mod-fcgid.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/libapache2-mod-fcgid.git
+
+Package: libapache2-mod-fcgid
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: FastCGI interface module for Apache 2
+ This package contains mod_fcgid, a high-performance alternative to mod_cgi
+ or mod_cgid. It starts a sufficient number of instances of the CGI program
+ to handle concurrent requests. These programs remain running to handle
+ further incoming requests.
+ .
+ It is a binary-compatible alternative to Apache module mod_fastcgi.
+
+Package: libapache2-mod-fcgid-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: libapache2-mod-fcgid (= ${binary:Version}), ${misc:Depends}
+Description: debugging symbols for mod_fcgid
+ This package contains mod_fcgid, a high-performance alternative to mod_cgi
+ or mod_cgid. It starts a sufficient number of instances of the CGI program
+ to handle concurrent requests. These programs remain running to handle
+ further incoming requests.
+ .
+ This package contains the debugging symbols for mod_fcgid.

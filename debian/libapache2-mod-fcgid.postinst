@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ]; then
+  chown www-data:www-data /var/lib/apache2/fcgid
+fi
+
+#DEBHELPER#
